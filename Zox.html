@@ -233,9 +233,13 @@ Error message and password prompt
 
 <li>Aurelia Burke</li>
 
+<li>CategoryTemplate</li>
+
 <li>Dante Burton</li>
 
 <li>Delci Kensingtonne</li>
+
+<li>Draft of 'New Tiddler'</li>
 
 <li>Effulgence</li>
 
@@ -246,6 +250,8 @@ Error message and password prompt
 <li>Radizk Klaph'sk</li>
 
 <li>Scarlett Gray</li>
+
+<li>SubcategoryTemplate</li>
 
 <li>Tomas Mason</li>
 
@@ -10180,12 +10186,8 @@ Error message and password prompt
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[$:/plugins/danielo515/ContextPlugin]]
-# [[$:/plugins/felixhayashi/hotzone]]
-# [[$:/plugins/felixhayashi/vis]]
-# [[$:/plugins/flibbles/relink]]
-# [[$:/plugins/jd/mob]]
-# [[$:/plugins/snowgoon88/edit-comptext]]</pre>
+# [[CategoryTemplate]]
+# [[SubcategoryTemplate]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -11546,7 +11548,7 @@ focus: show</pre>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210120050232930" list="Zox Effulgence [[Delci Kensingtonne]] [[Tomas Mason]] [[Aria DeRosa]] [[Scarlett Gray]] [[Magdlys Tiberykov]] [[Dante Burton]] [[Radizk Klaph'sk]] [[Aurelia Burke]] [[Kieran Bennett]]" modified="20210120050232930" title="$:/StoryList">
+<div created="20210120050232930" list="$:/Import Zox Effulgence [[Delci Kensingtonne]] [[Tomas Mason]] [[Aria DeRosa]] [[Scarlett Gray]] [[Magdlys Tiberykov]] [[Dante Burton]] [[Radizk Klaph'sk]] [[Aurelia Burke]] [[Kieran Bennett]] [[Draft of 'New Tiddler']]" modified="20210120050232930" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210120035538666" modified="20210120035541743" title="$:/theme">
@@ -11684,6 +11686,20 @@ Openly wears a Skyfarer's Jacket, paired with goggles. </pre>
 
 A snobby, old, woman that runs an immaculately clean, if terribly cramped, store. Deals in assorted miscellany. Primarily Tea.</pre>
 </div>
+<div created="20201008195548057" modified="20210104085238846" tags="Template" title="CategoryTemplate" tmap.id="1960951b-c2c7-4b5b-b91b-eb89ce2682d1">
+<pre>&lt;$set name=&quot;category&quot; value={{!!title}}&gt;
+
+&lt;ul&gt;
+List of all &lt;&lt;category&gt;&gt;:
+
+&lt;$list filter=&quot;[tag{!!title}is[tag]sort[title]] -[!tag&lt;category&gt;] -[tag{!!title}is[tag]tagging[]]&quot; template=&quot;SubcategoryTemplate&quot;/&gt;
+
+&lt;&lt;list-links &quot;[tag{!!title}!is[tag]] -[!tag&lt;category&gt;] -[tag{!!title}is[tag]tagging[]]&quot;&gt;&gt;
+&lt;/ul&gt;
+
+&lt;/$set&gt;
+</pre>
+</div>
 <div created="20210120050017850" modified="20210120050056698" tags="People" title="Dante Burton">
 <pre>The Quartermaster aboard the ITV Morning Dew.
 
@@ -11701,6 +11717,9 @@ Though she certainly seems to be gifted a shapely form, the left side of her nec
 She has two notable outfits. When outside, she's often draped in a heavy, grey cloak with a heavy fur scarf above a fine, red tunic above some shortened (to roughly her first knee) fur pants, interestingly, with steel kneeguards. She doesn't wear shoes, on account of being digitigrade.
 
 Her other outfit is never seen outside the Sky's Bend. A crimson-trimmed, Half-Corset is worn below her usual cloak-and-scarf affair, paired with a short skirt and &lt;i&gt;fanciful&lt;/i&gt; stockings that wouldn't look out of place on someone of noble birth. Thankfully, the Fireplace in the Sky's Bend never stops roaring.</pre>
+</div>
+<div created="20210120050936484" draft.of="New Tiddler" draft.title="New TiddlerCategoryTemplate SubcategoryTemplate" modified="20210120051107177" tags="" title="Draft of 'New Tiddler'">
+<pre></pre>
 </div>
 <div created="20210120044150148" modified="20210120044208793" tags="Locations WIP" title="Effulgence">
 <pre></pre>
@@ -11724,6 +11743,15 @@ Bright green scales and vibrant yellow frills. A sibilant hiss. A wide breadth o
 <pre>The current Captain of the Guard and Head of Port Authority.
 
 An intense, fierce, Half-Orc woman. Rarely seen outside of her heavy lmperialist coat. Carries a Warhammer with a blackened metal head that catches the light wrong with glimmers of something unnatural.</pre>
+</div>
+<div created="20210104075126876" modified="20210104084909313" tags="Template" title="SubcategoryTemplate" tmap.id="b1298939-9b3b-490f-a475-9949106b7897">
+<pre>&lt;ul&gt;
+&lt;li&gt;&lt;$link/&gt;&lt;/li&gt;
+
+&lt;$list filter=&quot;[tag{!!title}is[tag]sort[title]] -[!tag&lt;category&gt;] -[tag{!!title}is[tag]tagging[]]&quot; template=&quot;SubcategoryTemplate&quot;/&gt;
+
+&lt;&lt;list-links &quot;[tag{!!title}!is[tag]] -[!tag&lt;category&gt;] -[tag{!!title}is[tag]tagging[]]&quot;&gt;&gt;
+&lt;/ul&gt;</pre>
 </div>
 <div created="20210120045344558" modified="20210120045632358" tags="People" title="Tomas Mason">
 <pre>The current Mayor of Effulgence.
